@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CallSdkDemo</string>
+
+    <string name="tip_menu_title">CallSDK Demo示例</string>
+</resources>
