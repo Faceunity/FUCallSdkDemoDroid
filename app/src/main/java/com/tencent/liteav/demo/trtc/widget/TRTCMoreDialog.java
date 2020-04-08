@@ -15,11 +15,11 @@ import com.tencent.liteav.demo.R;
 import com.tencent.trtc.TRTCCloudDef;
 
 import java.lang.ref.WeakReference;
-
 /**
  * Module:   TRTCMoreDialog
- * <p>
+ *
  * Function: 用于对 SDK 提供的接口，如前后摄像头切换、画面填充模式、混流等功能的展示
+ *
  */
 public class TRTCMoreDialog extends Dialog implements View.OnClickListener {
     private final static String TAG = "TRTCMoreDialog";
@@ -67,27 +67,16 @@ public class TRTCMoreDialog extends Dialog implements View.OnClickListener {
 
     public interface IMoreListener {
         void onSwitchCamera(boolean bFrontCamera);
-
         void onFillModeChange(boolean bFillMode);
-
         void onVideoRotationChange(boolean bVertical);
-
         void onEnableAudioCapture(boolean bEnable);
-
         void onEnableAudioHandFree(boolean bEnable);
-
         void onMirrorLocalVideo(int mirrorType);
-
         void onMirrorRemoteVideo(boolean bMirror);
-
         void onEnableGSensor(boolean bEnable);
-
         void onEnableAudioVolumeEvaluation(boolean bEnable);
-
         void onEnableCloudMixture(boolean bEnable);
-
         void onClickButtonGetPlayUrl();
-
         void onClickButtonLinkMicWithOtherRoom();
     }
 

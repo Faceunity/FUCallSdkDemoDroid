@@ -390,7 +390,6 @@ public class TRTCVideoLayoutManager extends RelativeLayout implements TRTCVideoL
      * 切换到堆叠布局：
      * 1. 如果堆叠布局参数未初始化先进行初始化：大画面+左右各三个画面
      * 2. 修改布局参数
-     *
      * @param needAddView
      */
     private void makeFloatLayout(boolean needAddView) {

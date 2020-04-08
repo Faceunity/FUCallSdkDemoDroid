@@ -171,7 +171,6 @@ public class MovieVideoFrameReader extends Thread {
         public interface FrameCallback {
             /**
              * Called immediately before the frame is rendered.
-             *
              * @param presentationTimeUsec The desired presentation time, in microseconds.
              */
             void preRender(long presentationTimeUsec);
@@ -194,7 +193,7 @@ public class MovieVideoFrameReader extends Thread {
         /**
          * Constructs a MoviePlayer.
          *
-         * @param sourceFile    The video file to open.
+         * @param sourceFile The video file to open.
          * @param outputSurface The Surface where frames will be sent.
          * @param frameCallback Callback object, used to pace output.
          * @throws IOException
@@ -566,7 +565,7 @@ public class MovieVideoFrameReader extends Thread {
             /**
              * Prepares new PlayTask.
              *
-             * @param player   The player object, configured with control and output.
+             * @param player The player object, configured with control and output.
              * @param feedback UI feedback object.
              */
             public PlayTask(MoviePlayer player, PlayerFeedback feedback) {

@@ -159,7 +159,7 @@ public class TestSendCustomCameraData implements GLThread.IGLSurfaceTextureListe
         openCamera(mCameraType == Camera.CameraInfo.CAMERA_FACING_FRONT ? Camera.CameraInfo.CAMERA_FACING_BACK : Camera.CameraInfo.CAMERA_FACING_FRONT);
         mIsSending = true;
         if (mFURenderer != null) {
-            mFURenderer.onCameraChange(mCameraType, mCameraOrientation);
+            mFURenderer.onCameraChanged(mCameraType, mCameraOrientation);
         }
     }
 

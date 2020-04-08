@@ -14,8 +14,9 @@ import java.util.ArrayList;
 
 /**
  * Module:   TRTCUserSelectDialog
- * <p>
+ *
  * Function: 单选框用于选择userid
+ *
  */
 public class TRTCUserSelectDialog extends Dialog implements RadioGroup.OnCheckedChangeListener {
     private RadioGroup rgMain;

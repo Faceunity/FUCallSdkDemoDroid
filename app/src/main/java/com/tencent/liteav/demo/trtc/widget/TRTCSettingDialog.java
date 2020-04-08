@@ -23,8 +23,9 @@ import java.util.ArrayList;
 
 /**
  * Module:   TRTCSettingDialog
- * <p>
+ *
  * Function: 用于对视频通话的分辨率、帧率和流畅模式进行调整，并支持记录下这些设置项
+ *
  */
 public class TRTCSettingDialog extends Dialog {
     private final static String TAG = TRTCSettingDialog.class.getSimpleName();
@@ -87,9 +88,7 @@ public class TRTCSettingDialog extends Dialog {
     public interface ISettingListener {
         void onSettingComplete();
     }
-
     private WeakReference<ISettingListener> settingListener;
-
     public TRTCSettingDialog(Context context, ISettingListener listener, int appScene) {
         super(context, R.style.room_setting_dlg);
         settingListener = new WeakReference<>(listener);
@@ -127,7 +126,6 @@ public class TRTCSettingDialog extends Dialog {
         super.show();
         updateDialogValue();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -198,11 +196,9 @@ public class TRTCSettingDialog extends Dialog {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tvVideoBitrate.setText("" + getBitrate(progress) + "kbps");
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
@@ -340,25 +336,25 @@ public class TRTCSettingDialog extends Dialog {
         return 10;
     }
 
-    private int getBitrateProgress(int bitrate) {
+    private int getBitrateProgress(int bitrate){
         int minBitrate = getMinBitrate(curRes);
         int stepBitrate = getStepBitrate(curRes);
 
         int progress = (bitrate - minBitrate) / stepBitrate;
-        Log.e(TAG, "getBitrateProgress->progress: " + progress + ", min: " + minBitrate + ", stepBitrate: " + stepBitrate + "/" + bitrate);
+        Log.e(TAG, "getBitrateProgress->progress: " + progress + ", min: " + minBitrate + ", stepBitrate: " + stepBitrate + "/"+bitrate);
         return progress;
     }
 
-    private int getBitrate(int progress) {
+    private int getBitrate(int progress){
         int minBitrate = getMinBitrate(curRes);
         int maxBitrate = getMaxBitrate(curRes);
         int stepBitrate = getStepBitrate(curRes);
         int bit = (progress * stepBitrate) + minBitrate;
-        Log.e(TAG, "getBitrate->bit: " + bit + ", min: " + minBitrate + ", max: " + maxBitrate);
+        Log.e(TAG, "getBitrate->bit: " + bit + ", min: " + minBitrate + ", max: " +maxBitrate);
         return bit;
     }
 
-    private void updateSolution(int pos) {
+    private void updateSolution(int pos){
         int minBitrate = getMinBitrate(curRes);
         int maxBitrate = getMaxBitrate(curRes);
 
@@ -368,7 +364,7 @@ public class TRTCSettingDialog extends Dialog {
             sbVideoBitrate.setMax(max);
             int defBitrate = getDefBitrate(curRes);
             sbVideoBitrate.setProgress(getBitrateProgress(defBitrate));
-        } else {
+        }else {
             sbVideoBitrate.setMax(max);
         }
     }

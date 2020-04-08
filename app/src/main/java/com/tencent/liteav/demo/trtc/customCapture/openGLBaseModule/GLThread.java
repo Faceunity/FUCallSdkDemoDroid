@@ -83,7 +83,6 @@ public class GLThread {
 
     private int mInputWidth;
     private int mInputHeight;
-
     public void setInputSize(int width, int height) {
         mInputWidth = width;
         mInputHeight = height;
