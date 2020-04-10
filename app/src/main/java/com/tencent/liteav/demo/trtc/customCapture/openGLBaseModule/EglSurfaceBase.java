@@ -53,7 +53,6 @@ public class EglSurfaceBase {
     /**
      * Creates a window surface.
      * <p>
-     *
      * @param surface May be a Surface or SurfaceTexture.
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)

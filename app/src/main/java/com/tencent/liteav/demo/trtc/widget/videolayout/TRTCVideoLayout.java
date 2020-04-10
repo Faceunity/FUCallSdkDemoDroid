@@ -25,15 +25,15 @@ import java.util.HashMap;
 
 /**
  * Module: TRTCVideoLayout
- * <p>
+ *
  * Function:
- * <p>
+ *
  * 此 TRTCVideoLayout 封装了{@link TXCloudVideoView} 以及业务逻辑 UI 控件
  * 作用：
  * 1. 实现了手势监听，配合 {@link TRTCVideoLayoutManager} 能够实现自由拖动 View。
- * 详情可见：{@link TRTCVideoLayout#initGestureListener()}
- * 实现原理：利用 RelativeLayout 的 margin 实现了能够在父容器自由定位的特性；需要注意，{@link TRTCVideoLayout} 不能增加约束规则，如 alignParentRight 等，否则无法自由定位。
- * <p>
+ *    详情可见：{@link TRTCVideoLayout#initGestureListener()}
+ *    实现原理：利用 RelativeLayout 的 margin 实现了能够在父容器自由定位的特性；需要注意，{@link TRTCVideoLayout} 不能增加约束规则，如 alignParentRight 等，否则无法自由定位。
+ *
  * 2. 对{@link TXCloudVideoView} 与逻辑 UI 进行组合，在 muteLocal、音量回调等情况，能够进行 UI 相关的变化。若您的项目中，也相关的业务逻辑，可以参照 Demo 的相关实现。
  */
 class TRTCVideoLayout extends RelativeLayout implements View.OnClickListener {

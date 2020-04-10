@@ -56,7 +56,7 @@ import java.util.zip.ZipInputStream;
 
 /**
  * Module:   TRTCBeautySettingPannel
- * <p>
+ *
  * 选择美颜，滤镜，动效等参数的界面，其中大眼，瘦脸，动效等功能在企业版SDK才生效
  */
 public class TRTCBeautySettingPanel extends FrameLayout implements SeekBar.OnSeekBarChangeListener {
@@ -978,7 +978,6 @@ public class TRTCBeautySettingPanel extends FrameLayout implements SeekBar.OnSee
             this.mUrl = url;
             mProcessing = false;
         }
-
         public void start(Downloadlistener listener) {
             if (listener == null || TextUtils.isEmpty(mUrl) || mProcessing) {
                 return;
@@ -1070,9 +1069,7 @@ public class TRTCBeautySettingPanel extends FrameLayout implements SeekBar.OnSee
 
     private interface Downloadlistener {
         void onDownloadFail(String errorMsg);
-
         void onDownloadProgress(final int progress);
-
         void onDownloadSuccess(String filePath);
     }
 
@@ -1273,10 +1270,8 @@ public class TRTCBeautySettingPanel extends FrameLayout implements SeekBar.OnSee
     private class CustomProgressDialog {
         private Dialog mDialog;
         private TextView tvMsg;
-
         /**
          * 得到自定义的progressDialog
-         *
          * @param context
          * @param msg
          * @return

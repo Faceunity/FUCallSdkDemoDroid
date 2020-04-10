@@ -67,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <Button
                     android:id="@+id/btn_remote_video"
                     android:layout_width="@dimen/icon_width"
@@ -81,7 +80,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <Button
                     android:id="@+id/btn_remote_audio"
                     android:layout_width="@dimen/icon_width"
@@ -95,7 +93,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <Button
                     android:id="@+id/btn_fill_mode"
                     android:layout_width="@dimen/icon_width"

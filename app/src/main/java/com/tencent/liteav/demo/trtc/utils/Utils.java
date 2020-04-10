@@ -30,7 +30,6 @@ public class Utils {
 
     /**
      * 计算 MD5
-     *
      * @param string
      * @return
      */
@@ -60,7 +59,6 @@ public class Utils {
 
     /**
      * 根据 Uri 转换到真实的路径
-     *
      * @param context
      * @param contentUri
      * @return
